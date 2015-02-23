@@ -1,10 +1,13 @@
 <template name="projects">
-Projects Page
+	{{#if showProjectDialog}}
+	{{>projectForm}}
+	{{/if}}
 	<div class="container-fluid">
 		<div class="row-fluid">
 		<div class="page-header">
 			<h1>Project<small>List</small></h1>
 		</div>
+		<button class="btn btn-large btn-success addProject">Add Project</button>
 		<table class="table table-bordered table-striped table-hover">
 			
 		
@@ -30,8 +33,29 @@ Projects Page
 	<tr class="projectRow">
 		<td>{{name}}</td>
 		<td>{{client}}</td>
-		<td>{{duedate}}</td>
+		<td>{{formstDate duedate}}</td>
 		<td>{{status}}</td>
 	</tr>
+	
+</template>
+<template name="projectForm">
+	<div id="example" class="modal">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">x</a>
+	    <h3>Add Project</h3>
+	    <!--<a href="#" class="close">&amp;times;</a>-->
+	</div>
+	<div class="modal-body">
+		<label for="name">Name:</label><input type="text" class="input input-xlarge name" name="name" value="{{project.name}}" id="name">
+		<label for="client">Client:</label><input type="text" class="input input-xlarge client" name="name" value="{{project.client}}" id="client">
+		
+		
+	     <!--<h4>Add Project</h4>-->
+	</div>
+	<div class="modal-footer">
+	    <a href="#" class="btn btn-success save">Save</a>
+	    <a href="#" class="btn cancel" data-dismiss="modal">Cancel</a>
+	</div>
+	</div>
 	
 </template>
