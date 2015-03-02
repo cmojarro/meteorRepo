@@ -1,5 +1,7 @@
 Router.configure({
-layoutTemplate: 'projects'
+layoutTemplate: 'projects',
+'/projects':'projects',
+'/employees':'employees'
 //layoutTemplate: 'projects'
 
 });
@@ -7,3 +9,10 @@ layoutTemplate: 'projects'
 Router.route('/', {'/':'homepage','/projects':'projects', '/employees':'employees'});
 //Router.route('/', {name: 'projects'});
 // Meteor.Router.add({'/':'homepage','/projects':'projects', '/employees':'employees'})
+
+
+//Meteor.Router.add({
+// 	'/':'homepage',
+//	'/projects':'projects',
+//	'/employees':'employees'
+// })
