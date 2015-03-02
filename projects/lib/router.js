@@ -1,5 +1,6 @@
 Router.configure({
-layoutTemplate: 'homepage'
+layoutTemplate: 'projects'
+//layoutTemplate: 'projects'
 
 });
 //Router.route('/', {name: 'projects'});
