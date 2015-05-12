@@ -1,6 +1,6 @@
-Template.postSubmit.created = function() {
+Template.postSubmit.onCreated(function() {
   Session.set('postSubmitErrors', {});
-}
+});
 
 Template.postSubmit.helpers({
   errorMessage: function(field) {
